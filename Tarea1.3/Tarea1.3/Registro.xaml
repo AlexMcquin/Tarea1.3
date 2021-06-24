@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea1._3.Registro">
+    
+    <ContentPage.Content>
+        
+        <StackLayout BackgroundColor="White">
+
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Registros" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+
+            <Entry Placeholder=" Nombres" PlaceholderColor="Gray" TextColor="Black" x:Name="txtnombres"/>
+            <Entry Placeholder=" Apellidos" PlaceholderColor="Gray" TextColor="Black" x:Name="txtapellidos"/>
+            <Entry Placeholder=" Edad" PlaceholderColor="Gray" TextColor="Black" Keyboard="Numeric" x:Name="txtEdad"/>
+            <Entry Placeholder=" Correo" PlaceholderColor="Gray" TextColor="Black" x:Name="txtEmail"/>
+            <Entry Placeholder=" Direccion" PlaceholderColor="Gray" TextColor="Black" x:Name="txtDireccion"/>
+
+            <Button x:Name="btnBorrar" Text="Borrar" Clicked="botonBorrar" BackgroundColor="IndianRed"/>
+            <Button x:Name="btnEditar" Text="Editar" Clicked="botonEditar" BackgroundColor="DeepSkyBlue"/>
+
+            <Label Text="Lista de Registros:" HorizontalTextAlignment="Center" TextColor="Black" FontSize="18"/>
+            <ListView x:Name="ListaPersonas" ItemTapped="listviewSelect">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding nombres}" />
+                    </DataTemplate 
+                     >
+                </ListView.ItemTemplate>
+            </ListView>
+
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

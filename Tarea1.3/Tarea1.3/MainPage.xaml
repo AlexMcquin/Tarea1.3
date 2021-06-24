@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea1._3.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Ver Lista"
+                     x:Name="toolbarmenu"
+                     IconImageSource="example_icon.png"
+                     Order="Primary"
+                     Priority="0"
+                     Clicked="toolbarmenu_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout BackgroundColor="White">
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Formulario" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+
+        <Entry Placeholder=" Nombre" PlaceholderColor="Gray" TextColor="Black" x:Name="txtnombre"/>
+        <Entry Placeholder=" Apellido" PlaceholderColor="Gray" TextColor="Black" x:Name="txtapellido" />
+
+        <Entry Placeholder=" Edad" PlaceholderColor="Gray" TextColor="Black" Keyboard="Numeric" x:Name="txtedad"/>
+        <Entry Placeholder=" Correo" PlaceholderColor="Gray" TextColor="Black" x:Name="txtcorreo" />
+        <Entry Placeholder=" direccion" PlaceholderColor="Gray" TextColor="Black" x:Name="txtdireccion" />
+
+        <Button x:Name="btnSalvar" Text="Salvar Info" Clicked="btnSalvar_Clicked" BackgroundColor="ForestGreen"/>
+    </StackLayout>
+
+</ContentPage>
